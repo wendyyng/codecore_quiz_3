@@ -2,6 +2,7 @@ import BidDetails from "./BidDetails";
 
 export default function BidList(props) {
   const bids = props.list
+
   return(
     <div>
       <h4>Previous Bids</h4>

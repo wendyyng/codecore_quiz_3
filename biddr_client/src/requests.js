@@ -45,8 +45,8 @@ export const Auction = {
 
 //========Bids========>
 export const Bid = {
-    create(params, userId) {
-      return fetch(`${baseURL}/users/${userId}/bids`, {
+    create(id, params) {
+      return fetch(`${baseURL}/auctions/${id}/bids`, {
         method: "POST",
         credentials: "include",
         headers: {
