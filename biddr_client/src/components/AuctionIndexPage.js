@@ -15,7 +15,7 @@ export default function AuctionIndexPage () {
     }, [])
   return (
     <>
-    <div>Auctions</div>
+    <h1>Auctions</h1>
         {
         auctions.map((a,i) => {
             return (

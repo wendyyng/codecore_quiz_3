@@ -2,7 +2,7 @@ import React from 'react'
 
 const WelcomePage = () => {
   return (
-    <div>WelcomePageddddd</div>
+    <h1>Going twice. Going once. Sold to Biddr!</h1>
   )
 }
 

@@ -44,10 +44,9 @@ export const Auction = {
 }
 
 //========Bids========>
-export const Review = {
+export const Bid = {
     create(params, userId) {
-      return fetch(`${baseURL}/users/${userId}/reviews`, {
-        ///api/v1/users/:user_id/reviews
+      return fetch(`${baseURL}/users/${userId}/bids`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -58,7 +57,6 @@ export const Review = {
     },
   };
 
-  
   //========Users========>
   export const User = {
       current(){
@@ -77,7 +75,7 @@ export const Review = {
             }).then(res => res.json());  
         }
     }
-    
+
     //Sign In AJAX Helper
     export const Session = {
         create(params){
