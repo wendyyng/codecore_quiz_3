@@ -3,13 +3,13 @@ class Api::V1::BidsController < Api::ApplicationController
         bid = Bid.new bid_params
         bid.user = current_user
         bid.save!
-        render json: { id: bid.id }
+        render json: bid
     end
 
     private
 
     def bid_params
-        params.permit(:price, :bid_id)
-    end
+        params.permit(:bid_price, :auction_id)
+      end
 
 end
