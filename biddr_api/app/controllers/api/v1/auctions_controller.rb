@@ -1,7 +1,7 @@
 class Api::V1::AuctionsController < Api::ApplicationController
     def index
         auctions = Auction.order(id: :desc)
-        render(json: auctions, each_serializer: AuctionCollectionSerializer)
+        render(json: auctions)
     end
 
     def show

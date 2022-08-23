@@ -32,7 +32,7 @@ class Api::ApplicationController < ApplicationController
 
   private
 
-#   def authenticate_user!
-#     redirect_to new_session_path, notice: "Please sign in" unless user_signed_in?
-#   end
+  def authenticate_user!
+    redirect_to new_session_path, notice: "Please sign in" unless user_signed_in?
+  end
 end
