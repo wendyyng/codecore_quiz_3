@@ -24,7 +24,6 @@ export default function AuctionShowPage(props)  {
          title={title}
          description={description}
          reserve_price={reserve_price}
-         user={user}
          created_at={created_at}
          ends_at={ends_at}
         />

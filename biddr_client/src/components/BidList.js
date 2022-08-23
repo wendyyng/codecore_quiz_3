@@ -11,7 +11,7 @@ export default function BidList(props) {
           bids.map((b,i) => {
             return <BidDetails key={i} 
             bid_price={b.bid_price}
-            author_name={b.author}
+            
             created_at={b.created_at}
             id={b.id}
             />
