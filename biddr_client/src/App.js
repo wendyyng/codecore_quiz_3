@@ -6,6 +6,8 @@ import AuctionIndexPage from './components/AuctionIndexPage'
 import AuctionShowPage from './components/AuctionShowPage'
 import NavBar from './components/NavBar'
 import { User } from './requests';
+import SignInPage from './components/SignInPage';
+import SignUpPage from './components/SignUpPage';
 
 export default function App() {
   const [ user, setUser ] = useState(null)
@@ -30,6 +32,13 @@ export default function App() {
     <BrowserRouter>
       <NavBar currentUser={user} onSignOut={onSignOut} />
        <Switch>
+       <Route exact path='/sign_in'
+          render={(routeProps) => <SignInPage {...routeProps} onSignIn={getCurrentUser} />}
+          >
+          </Route>
+          <Route exact path='/sign_up'
+          render={(routeProps) => <SignUpPage {...routeProps} onSignUp={getCurrentUser} />}
+          ></Route>
           <Route exact path="/" component={WelcomePage} />
          <Route exact path='/auctions' component={AuctionIndexPage}/>
           <Route exact path='/auctions/:id' component={AuctionShowPage}></Route> */}

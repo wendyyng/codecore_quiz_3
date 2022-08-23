@@ -14,7 +14,7 @@ const NavBar = ({ currentUser, onSignOut }) => {
       {currentUser ? (
         <>
           <NavLink to="/auctions/new">New Auction</NavLink>-
-          <span>Welcome, {currentUser.first_name}</span>-{" "}
+          <span>Welcome, {currentUser.username}</span>{" "}
           <button onClick={handleSignOut}>Sign Out</button>
         </>
       ) : (

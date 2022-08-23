@@ -19,8 +19,8 @@ export default function AuctionIndexPage () {
         {
         auctions.map((a,i) => {
             return (
-                <div>
-                    <h1 key={i}><Link to={`/auctions/${a.id}`}>{a.title}</Link></h1>
+                <div key={i}>
+                    <h1><Link to={`/auctions/${a.id}`}>{a.title}</Link></h1>
                     <p>posted on {dateFormat(a.created_at, "mmmm dS, yyyy")}</p>
                 </div>
             )
