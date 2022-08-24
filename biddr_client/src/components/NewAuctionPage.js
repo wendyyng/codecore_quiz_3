@@ -30,11 +30,11 @@ class NewAuctionPage extends Component {
                 <div id="auction">
                     <h1 className="text-center p-2">Create An Auction</h1>
                 </div>
-            <div className="container d-flex flex-column justify-content-center align-items-center" >
-                <div style={{width: "15em"}} className="my-auto col-sm-12">    
-                    <NewAuctionForm errors={this.state.errors} submitForm={(params) => this.createNewAuction(params)} />
+                <div className="container d-flex flex-column justify-content-center align-items-center" >
+                    <div style={{width: "30em"}} className="shadow p-3 mb-5 bg-white rounded my-auto col-sm-12">    
+                        <NewAuctionForm errors={this.state.errors} submitForm={(params) => this.createNewAuction(params)} />
+                    </div>
                 </div>
-            </div>
             </>
 
         )

@@ -23,8 +23,8 @@ const SignUpPage = (props) => {
     }
 
     return(
-        <main className="d-flex justify-content-center">
-            <div style={{width: "15em"}} className="my-auto col-sm-12">
+        <main className="d-flex justify-content-center" >
+            <div style={{width: "30em"}} className="my-auto col-sm-12 shadow p-3 mb-5 bg-white rounded my-auto col-sm-12">
             <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

@@ -2,6 +2,9 @@ import BidDetails from "./BidDetails";
 
 export default function BidList(props) {
   const bids = props.list
+  console.log(bids)
+
+  // const bidDescending = [...bids].sort(((a, b) => b.bid_price - a.bid_price))
 
   return(
     <div>
@@ -9,7 +12,9 @@ export default function BidList(props) {
       <div>
         {
           bids ?
-          bids.map((b,i) => {
+          [...bids]
+          .sort(((a, b) => b.bid_price - a.bid_price))
+          .map((b,i) => {
             return <BidDetails key={i} 
             bid_price={b.bid_price}
             

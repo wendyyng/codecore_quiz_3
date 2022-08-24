@@ -3,7 +3,7 @@ import { Bid, Auction } from '../requests';
 
 export default function NewBidForm (props) {
     const [ bid, setBid ] = useState('')
-    const { id } = props
+    const { id, bids } = props
     const onChange = (e) => {
         setBid(e.target.value);
       };
@@ -18,6 +18,10 @@ export default function NewBidForm (props) {
             Auction.show(id)
         })
     }
+    let currentBid
+    if(bids){
+      currentBid = Math.max(...props.bids)
+    }
 
     return (
         <form onSubmit={e => handleBid(e)}>
@@ -26,7 +30,7 @@ export default function NewBidForm (props) {
             <br />
             <input type="number" name="bid_price" id=""
                 value={bid}
-                onChange={e => onChange(e)}
+                onChange={e => onChange(e)} min={currentBid > 0 ? Math.round(currentBid) : "1"}
             />
           </div>
           <div>

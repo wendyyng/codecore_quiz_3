@@ -19,7 +19,7 @@ const NavBar = ({ currentUser, onSignOut }) => {
         {currentUser ? (
           <>
             <NavLink className="m-2 text-decoration-none text-dark" to="/auctions/new">New Auction</NavLink>
-            <span>Welcome, {currentUser.username}</span>{" "}
+            <span className=" m-2 fw-bold">Welcome, {currentUser.username}</span>{" "}
             <button className="btn btn-secondary m-2" onClick={handleSignOut}>Sign Out</button>
           </>
         ) : (

@@ -7,7 +7,7 @@ import BidList from "./BidList";
 import NewBidForm from './NewBidForm';
 
 export default function AuctionShowPage(props)  {
-    const [ auction, setAuction ] = useState({})
+    const [ auction , setAuction ] = useState({})
 
     useEffect(() => {
         console.log(props.match.params.id)
@@ -16,21 +16,27 @@ export default function AuctionShowPage(props)  {
           setAuction(fetchedAPIauction)
         })
       }, [])
+      const { id, title, description, reserve_price, created_at, ends_at, bids } = auction
+      let bids_arr = []
 
-      const { id, title, description, reserve_price, created_at, ends_at } = auction
-      console.log(auction)
+      if(bids){
+        bids.map(bid => bids_arr.push(bid.bid_price))
+      }
+
   return (
-    <div class="container my-auto" id="auction-show-container">
+    <div className="container d-flex justify-content-center mt-4">
+    <div style={{width: "60em"}} className="container shadow p-3 mb-5 bg-white rounded" id="auction-show-container" >
         <AuctionDetails
          title={title}
          description={description}
          reserve_price={reserve_price}
          created_at={created_at}
-         user={auction.user.username}
          ends_at={ends_at}
+         bids={bids_arr}
         />
-        <NewBidForm  id={id}/>
-        <BidList list={auction.bids}/>
+        <NewBidForm  id={id} bids={bids_arr}/>
+        <BidList  list={auction.bids}/>
+    </div>
     </div>
   )
 }
