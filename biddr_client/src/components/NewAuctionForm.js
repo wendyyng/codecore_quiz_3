@@ -12,7 +12,8 @@ const NewAuctionForm = props => {
                 description: fd.get("description"),
                 reserve_price: fd.get("reserve_price"),
                 ends_at: fd.get("ends_at"),
-                created_at: new Date()
+                created_at: new Date(),
+                status: "draft"
             }
         )
 
@@ -26,13 +27,13 @@ const NewAuctionForm = props => {
             <div className="form-group">
                 <label htmlFor="title">Title*</label>
                 <br />
-                <input className="form-control" type="text" name="title" id="" required="required"/>
+                <input className="form-control" type="text" name="title" id="" required="required" placeholder="3 Year Old Macbook"/>
 
             </div>
             <div className="form-group">
                 <label htmlFor="description">Description*</label>
                 <br />
-                <input className="form-control" type="text" name="description" id="" required="required"/>
+                <input className="form-control" type="text" name="description" id="" required="required" placeholder="Details*"/>
 
             </div>
             <div className="form-group">
@@ -44,7 +45,7 @@ const NewAuctionForm = props => {
             <div className="form-group">
                 <label htmlFor="reserve_price">Reserve Price*</label>
                 <br />
-                <input className="form-control" type="number" name="reserve_price" id="" step="1" required="required" min="1"/>
+                <input className="form-control" type="number" name="reserve_price" id="" step="1" required="required" min="1" placeholder="1000"/>
 
             </div>
             <div>

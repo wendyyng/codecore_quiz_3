@@ -41,7 +41,8 @@ users = User.all
       ends_at: Faker::Date.forward(days: 14),
       created_at: created_at,
       updated_at: created_at,
-      user: users.sample
+      user: users.sample,
+      status: "published"
     })
 
   if p.valid?

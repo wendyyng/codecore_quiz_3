@@ -6,5 +6,6 @@ class Auction < ApplicationRecord
     validates :description, presence: true
     validates :ends_at, presence: true
     validates :reserve_price, presence: true
+    validates :status, presence: true
 
 end

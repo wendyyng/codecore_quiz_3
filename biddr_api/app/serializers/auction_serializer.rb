@@ -1,5 +1,5 @@
 class AuctionSerializer < ActiveModel::Serializer
-  attributes :id, :description, :title, :ends_at, :reserve_price, :created_at, :user
+  attributes :id, :description, :title, :ends_at, :reserve_price, :created_at, :user, :status
 
   has_many :bids
   belongs_to :user
