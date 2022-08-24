@@ -21,36 +21,39 @@ const NewAuctionForm = props => {
     }
 
     return(
+        <>
         <form onSubmit={getDataAndSubmit}>
-            <div>
-                <label htmlFor="title">Title</label>
+            <div className="form-group">
+                <label htmlFor="title">Title*</label>
                 <br />
-                <input type="text" name="title" id="" required="required"/>
+                <input className="form-control" type="text" name="title" id="" required="required"/>
+
+            </div>
+            <div className="form-group">
+                <label htmlFor="description">Description*</label>
+                <br />
+                <input className="form-control" type="text" name="description" id="" required="required"/>
+
+            </div>
+            <div className="form-group">
+                <label htmlFor="ends_at">Ends at*</label>
+                <br />
+                <input className="form-control" type="date" name="ends_at" id="" required="required"/>
+
+            </div>
+            <div className="form-group">
+                <label htmlFor="reserve_price">Reserve Price*</label>
+                <br />
+                <input className="form-control" type="number" name="reserve_price" id="" step="1" required="required" min="1"/>
 
             </div>
             <div>
-                <label htmlFor="description">Description</label>
-                <br />
-                <input type="text" name="description" id="" required="required"/>
-
-            </div>
-            <div>
-                <label htmlFor="ends_at">Ends at</label>
-                <br />
-                <input type="date" name="ends_at" id="" required="required"/>
-
-            </div>
-            <div>
-                <label htmlFor="reserve_price">Reserve Price</label>
-                <br />
-                <input type="number" name="reserve_price" id="" step="1" required="required"/>
-
-            </div>
-            <div>
-                <input type="submit" value="Create Auction" />
+                <input className="btn btn-secondary mt-3" type="submit" value="Save" />
             </div>
             
         </form>
+        </>
+ 
     )
 
 

@@ -5,8 +5,8 @@ export default function BidList(props) {
 
   return(
     <div>
-      <h4>Previous Bids</h4>
-      <ul>
+      <h4><u>Previous Bids</u></h4>
+      <div>
         {
           bids ?
           bids.map((b,i) => {
@@ -20,7 +20,7 @@ export default function BidList(props) {
           :
           null
         }
-      </ul>
+      </div>
     </div>
   )
 }

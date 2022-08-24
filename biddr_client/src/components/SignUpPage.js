@@ -23,27 +23,29 @@ const SignUpPage = (props) => {
     }
 
     return(
-        <main>
+        <main className="d-flex justify-content-center">
+            <div style={{width: "15em"}} className="my-auto col-sm-12">
             <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input type="text" name="username" id="username" />
+                    <input className="form-control" type="text" name="username" id="username" required="required"/>
                 </div>
-                <div>
+                <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="text" name="email" id="email" />
+                    <input className="form-control" type="text" name="email" id="email" required="required"/>
                 </div>
-                <div>
+                <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" />
+                    <input className="form-control" type="password" name="password" id="password" required="required"/>
                 </div>
-                <div>
+                <div className="form-group">
                     <label htmlFor="password_confirmation">Password Confiramtion</label>
-                    <input type="password" name="password_confirmation" id="password_confirmation" />
+                    <input className="form-control" type="password" name="password_confirmation" id="password_confirmation" required="required"/>
                 </div>
-                <input type="submit" value="Sign Up" />
+                <input className="btn btn-secondary mt-3" type="submit" value="Sign Up" />
             </form>
+            </div>
         </main>
     )
 }

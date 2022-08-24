@@ -10,6 +10,7 @@ import SignInPage from './components/SignInPage';
 import SignUpPage from './components/SignUpPage';
 import NewAuctionPage from './components/NewAuctionPage';
 import AuthRoute from './components/AuthRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   const [ user, setUser ] = useState(null)

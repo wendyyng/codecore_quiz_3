@@ -26,14 +26,17 @@ class NewAuctionPage extends Component {
 
     render(){
         return(
-            <div>
-                <div>
-                    <h1>Create An Auction</h1>
+            <>
+                <div id="auction">
+                    <h1 className="text-center p-2">Create An Auction</h1>
                 </div>
-                <div>    
+            <div className="container d-flex flex-column justify-content-center align-items-center" >
+                <div style={{width: "15em"}} className="my-auto col-sm-12">    
                     <NewAuctionForm errors={this.state.errors} submitForm={(params) => this.createNewAuction(params)} />
                 </div>
             </div>
+            </>
+
         )
     }
 }

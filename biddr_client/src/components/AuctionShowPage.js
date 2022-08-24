@@ -3,7 +3,7 @@ import { Auction } from '../requests'
 import AuctionDetails from "./AuctionDetails";
 import { useState, useEffect } from 'react';
 import BidList from "./BidList";
-import dateFormat from 'dateformat';
+
 import NewBidForm from './NewBidForm';
 
 export default function AuctionShowPage(props)  {
@@ -17,14 +17,16 @@ export default function AuctionShowPage(props)  {
         })
       }, [])
 
-      const { id, title, description, reserve_price, user, created_at, ends_at } = auction
+      const { id, title, description, reserve_price, created_at, ends_at } = auction
+      console.log(auction)
   return (
-    <div>
+    <div class="container my-auto" id="auction-show-container">
         <AuctionDetails
          title={title}
          description={description}
          reserve_price={reserve_price}
          created_at={created_at}
+         user={auction.user.username}
          ends_at={ends_at}
         />
         <NewBidForm  id={id}/>

@@ -30,7 +30,7 @@ export default function NewBidForm (props) {
             />
           </div>
           <div>
-            <input type="submit" value="Bid" />
+            <input className="btn btn-sm btn-secondary mt-2" type="submit" value="Bid" />
           </div>
         </form>
       );

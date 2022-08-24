@@ -1,38 +1,25 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#welcome-banner{
+  margin: 0%;
+  background-image: url('https://img.freepik.com/free-photo/wooden-gavel_93675-130731.jpg?w=900&t=st=1661303373~exp=1661303973~hmac=95b08c76ba867bb0cb387c55ca5c0e905e62e3410cd6d740376fe05c2b5ca45e');
+  width: 100vw;
+  height: 100vh; 
+  background-size:100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+ /* background-color: black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#auctions, #auction {
+  background-color: antiquewhite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  background-color: rgb(204, 203, 202) !important;
+  overflow: auto;
 }

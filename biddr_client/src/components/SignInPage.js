@@ -33,8 +33,8 @@ function SignInPage(props){
     }
 
     return(
-        <main>
-            <h1>Sign In</h1>
+        <main className="d-flex justify-content-center m-4">
+             <div style={{width: "15em"}} className="my-auto col-sm-12">
             <form onSubmit={handleSubmit}>
                 {errors.length > 0 ? (
                     <div>
@@ -45,18 +45,19 @@ function SignInPage(props){
                     ""
                 )}
 
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input type="text" name="email" id="email" onChange={event => {
+                <div className="form-group">
+                    <label htmlFor="email">Email*</label>
+                    <input className="form-control" type="text" name="email" id="email" onChange={event => {
                         setEmail(event.currentTarget.value)}} />
                 </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" onChange={event => {
+                <div className="form-group">
+                    <label htmlFor="password">Password*</label>
+                    <input className="form-control"type="password" name="password" id="password" onChange={event => {
                         setPassword(event.currentTarget.value)}} />
                 </div>
-                <input type="submit" value="Sign In" />
+                <input className="btn btn-secondary mt-3" type="submit" value="Sign In" />
             </form>
+            </div>
         </main>
     )
 }
